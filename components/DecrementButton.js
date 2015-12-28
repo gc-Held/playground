@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-class IncrementButton extends Component {
+class DecrementButton extends Component {
   
   render() {
 
@@ -8,10 +8,10 @@ class IncrementButton extends Component {
 
     return (
     <div>
-          <input type="button" onClick={this.props.actions.inc} value="Inc" />
+          <input type="button" onClick={this.props.actions.dec} value="Dec" />
     </div>
     )
   }
 }
 
-export default IncrementButton
+export default DecrementButton

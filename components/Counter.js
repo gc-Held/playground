@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import IncrementButton from './IncrementButton'
+import DecrementButton from './DecrementButton'
 import * as Actions from '../actions/counterActions'
 
 
@@ -18,7 +19,8 @@ class Counter extends Component {
     debugger
     return (
       <div>
-          <IncrementButton  store= {this.props.store} actions = {Actions}/>
+          <IncrementButton  store= {this.props.store} actions = {this.props.actions}/>
+          <DecrementButton  store= {this.props.store} actions = {this.props.actions}/>
           <p id="counter-display"> count is{this.props.counterReducer.count}</p>
       </div>
     )
